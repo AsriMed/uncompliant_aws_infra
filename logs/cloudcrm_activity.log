@@ -1,0 +1,23 @@
+2023-10-15 08:45:12 INFO [APP] User admin logged in from IP 203.0.113.42
+2023-10-15 08:47:23 INFO [APP] Database connection established with credentials: admin:Password123! # COMPLIANCE ISSUE: Logging credentials in plaintext
+2023-10-15 08:50:34 INFO [APP] User requested full data export for customer Jean Dupont (jean.dupont@example.com) # COMPLIANCE ISSUE: Logging PII in plaintext
+2023-10-15 09:12:56 INFO [APP] Credit card payment processed for Sophie Bernard: 4532-1234-5678-9012 # COMPLIANCE ISSUE: Logging sensitive financial data
+2023-10-15 09:30:18 WARN [APP] Failed login attempt for user admin from IP 185.244.25.10
+2023-10-15 09:30:48 WARN [APP] Failed login attempt for user admin from IP 185.244.25.10
+2023-10-15 09:31:12 WARN [APP] Failed login attempt for user admin from IP 185.244.25.10 # COMPLIANCE ISSUE: No brute force protection
+2023-10-15 09:31:59 INFO [APP] User admin logged in from IP 185.244.25.10 # COMPLIANCE ISSUE: Successful login after multiple failures
+2023-10-15 10:14:23 INFO [APP] Created new customer: {"id":156,"name":"Pierre Martin","email":"pierre.martin@example.com","phone":"+33123456789","address":"123 Rue de Paris, 75001 Paris","gdpr_consent":false} # COMPLIANCE ISSUE: Creating customer without GDPR consent
+2023-10-15 10:45:12 ERROR [APP] Database backup failed - encryption not enabled # COMPLIANCE ISSUE: No encrypted backups
+2023-10-15 11:12:34 INFO [SYSTEM] Web server started with SSL disabled # COMPLIANCE ISSUE: TLS disabled
+2023-10-15 11:30:22 WARN [SECURITY] Outdated software detected: OpenSSL 1.0.1 (CVE-2014-0160 Heartbleed vulnerable) # COMPLIANCE ISSUE: Using vulnerable software
+2023-10-15 12:20:56 INFO [APP] User admin changed RDS configuration to disable encryption # COMPLIANCE ISSUE: Disabling security features
+2023-10-15 12:45:32 INFO [APP] User admin updated database password to 'admin123' # COMPLIANCE ISSUE: Weak password and logging password
+2023-10-15 13:10:45 INFO [APP] CloudTrail logging disabled for cost optimization # COMPLIANCE ISSUE: Disabling audit logs
+2023-10-15 14:25:18 INFO [APP] Access granted to public S3 bucket: cloudcrm-customer-data # COMPLIANCE ISSUE: Public access to sensitive data
+2023-10-15 15:40:56 ERROR [SECURITY] Firewall rules updated to allow all traffic (0.0.0.0/0) # COMPLIANCE ISSUE: Overly permissive network rules
+2023-10-15 16:20:34 INFO [APP] User requested GDPR data deletion for customer ID 143, deletion pending review # COMPLIANCE ISSUE: Delayed GDPR deletion request
+2023-10-15 17:15:48 INFO [SYSTEM] System update deferred for 60 days # COMPLIANCE ISSUE: Postponing security updates
+2023-10-15 18:30:22 WARN [SECURITY] Multiple IAM users created with AdministratorAccess policy # COMPLIANCE ISSUE: Excessive permissions
+2023-10-15 19:45:12 INFO [APP] Customer data exported to unencrypted CSV file # COMPLIANCE ISSUE: Unencrypted data export
+2023-10-15 20:20:36 INFO [APP] Database query executed: "SELECT * FROM customers WHERE email LIKE '" + user_input + "'" # COMPLIANCE ISSUE: SQL injection vulnerability
+2023-10-15 21:30:48 ERROR [SECURITY] SSH brute force attack detected but no remediation taken # COMPLIANCE ISSUE: No security incident response 
